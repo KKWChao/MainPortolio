@@ -12,14 +12,14 @@ function SkillScene(props) {
 
   /* FRONT END IMAGES */
   const [html, css, js, ts, react, tailWind, three, nextjs] = useTexture([
-    "/src/assets/images/icons8-html-5-480.png",
-    "/src/assets/images/icons8-css3-480.png",
-    "/src/assets/images/icons8-javascript-480.png",
-    "/src/assets/images/icons8-typescript-480.png",
-    "/src/assets/images/icons8-tailwindcss-480.png",
-    "/src/assets/images/threefiber.png",
-    "/src/assets/images/icons8-react-native-480.png",
-    "/src/assets/images/icons8-nextjs-480.png",
+    "./assets/images/icons8-html-5-480.png",
+    "./assets/images/icons8-css3-480.png",
+    "./assets/images/icons8-javascript-480.png",
+    "./assets/images/icons8-typescript-480.png",
+    "./assets/images/icons8-tailwindcss-480.png",
+    "./assets/images/threefiber.png",
+    "./assets/images/icons8-react-native-480.png",
+    "./assets/images/icons8-nextjs-480.png",
   ]);
 
   const frontEnd = [
@@ -35,12 +35,12 @@ function SkillScene(props) {
 
   /* BACK END IMAGES */
   const [mongo, mySQL, python, express, node, graphQL] = useTexture([
-    "/src/assets/images/icons8-mongodb-480.png",
-    "/src/assets/images/mysql.png",
-    "/src/assets/images/icons8-python-480.png",
-    "/src/assets/images/icons8-express-js-480.png",
-    "/src/assets/images/icons8-nodejs-480.png",
-    "/src/assets/images/icons8-graphql-480.png",
+    "./assets/images/icons8-mongodb-480.png",
+    "./assets/images/mysql.png",
+    "./assets/images/icons8-python-480.png",
+    "./assets/images/icons8-express-js-480.png",
+    "./assets/images/icons8-nodejs-480.png",
+    "./assets/images/icons8-graphql-480.png",
   ]);
   const backEnd = [
     <meshPhongMaterial map={mongo} key={"mongo"} />,
@@ -54,10 +54,10 @@ function SkillScene(props) {
   /* TOOLS IMAGES */
 
   const [vsCode, aws, github, heroku] = useTexture([
-    "/src/assets/images/icons8-visual-studio-480.png",
-    "/src/assets/images/icons8-amazon-web-services-480.png",
-    "/src/assets/images/icons8-github-480.png",
-    "/src/assets/images/icons8-heroku-480.png",
+    "./assets/images/icons8-visual-studio-480.png",
+    "./assets/images/icons8-amazon-web-services-480.png",
+    "./assets/images/icons8-github-480.png",
+    "./assets/images/icons8-heroku-480.png",
   ]);
 
   const tools = [
@@ -69,11 +69,11 @@ function SkillScene(props) {
 
   /* SPHERE MESHES */
   const [color, displacement, normaldx, normalgl, roughness] = useTexture([
-    "/src/assets/meshes/sphereMesh/MetalPlates006_1K_Color.png",
-    "/src/assets/meshes/sphereMesh/MetalPlates006_1K_Displacement.png",
-    "/src/assets/meshes/sphereMesh/MetalPlates006_1K_NormalDX.png",
-    "/src/assets/meshes/sphereMesh/MetalPlates006_1K_NormalGL.png",
-    "/src/assets/meshes/sphereMesh/MetalPlates006_1K_Roughness.png",
+    "./assets/mesh/sphereMesh/MetalPlates006_1K_Color.png",
+    "./assets/mesh/sphereMesh/MetalPlates006_1K_Displacement.png",
+    "./assets/mesh/sphereMesh/MetalPlates006_1K_NormalDX.png",
+    "./assets/mesh/sphereMesh/MetalPlates006_1K_NormalGL.png",
+    "./assets/mesh/sphereMesh/MetalPlates006_1K_Roughness.png",
   ]);
 
   /* ROTATIONS */

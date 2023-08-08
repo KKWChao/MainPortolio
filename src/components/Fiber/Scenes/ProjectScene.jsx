@@ -149,7 +149,7 @@ function Project(props) {
       <Image
         maxWidth={1}
         anchorY={"bottom"}
-        url={"/src/assets/images/icons8-site-100.png"}
+        url={"./assets/images/icons8-site-100.png"}
         scale={0.25}
         transparent
         position={[0.5, -2.25, 0.01]}
@@ -160,7 +160,7 @@ function Project(props) {
       <Image
         maxWidth={1}
         anchorY={"bottom"}
-        url={"/src/assets/images/github-mark-white.png"}
+        url={"./assets/images/github-mark-white.png"}
         scale={0.25}
         transparent
         position={[-0.5, -2.25, 0.01]}

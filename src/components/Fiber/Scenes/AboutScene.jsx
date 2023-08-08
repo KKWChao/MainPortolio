@@ -14,13 +14,13 @@ function AboutScene(props) {
     uranusTexture,
     neptuneTexture,
   ] = useTexture([
-    "/src/assets/meshes/planetMesh/2k_mercury.jpg",
-    "/src/assets/meshes/planetMesh/2k_venus.jpg",
-    "/src/assets/meshes/planetMesh/2k_mars.jpg",
-    "/src/assets/meshes/planetMesh/2k_jupiter.jpg",
-    "/src/assets/meshes/planetMesh/2k_saturn.jpg",
-    "/src/assets/meshes/planetMesh/2k_uranus.jpg",
-    "/src/assets/meshes/planetMesh/2k_neptune.jpg",
+    "./assets/mesh/planetMesh/2k_mercury.jpg",
+    "./assets/mesh/planetMesh/2k_venus.jpg",
+    "./assets/mesh/planetMesh/2k_mars.jpg",
+    "./assets/mesh/planetMesh/2k_jupiter.jpg",
+    "./assets/mesh/planetMesh/2k_saturn.jpg",
+    "./assets/mesh/planetMesh/2k_uranus.jpg",
+    "./assets/mesh/planetMesh/2k_neptune.jpg",
   ]);
   return (
     <group
@@ -87,7 +87,7 @@ function AboutScene(props) {
 
 /* SUN */
 function Sun(props) {
-  const [sunTexture] = useTexture(["/src/assets/meshes/planetMesh/2k_sun.jpg"]);
+  const [sunTexture] = useTexture(["./assets/mesh/planetMesh/2k_sun.jpg"]);
   const sunRef = useRef();
 
   useFrame(() => {
@@ -115,17 +115,15 @@ function Earth(props) {
     earthDisplacementMap,
     moonTexture,
   ] = useTexture([
-    "/src/assets/meshes/earthMoonMesh/2k_earth_daymap.jpg",
-    "/src/assets/meshes/earthMoonMesh/earth_normal.jpg",
-    "/src/assets/meshes/earthMoonMesh/earth_specular.jpg",
-    "/src/assets/meshes/earthMoonMesh/earth_displacement.jpg",
-    "/src/assets/meshes/earthMoonMesh/2k_moon.jpg",
+    "./assets/mesh/earthMoonMesh/2k_earth_daymap.jpg",
+    "./assets/mesh/earthMoonMesh/earth_normal.jpg",
+    "./assets/mesh/earthMoonMesh/earth_specular.jpg",
+    "./assets/mesh/earthMoonMesh/earth_displacement.jpg",
+    "./assets/mesh/earthMoonMesh/2k_moon.jpg",
   ]);
   const earthRef = useRef();
   const moonRef = useRef();
   const earthGroupRef = useRef();
-  const xAxis = 3;
-  const speed = 0.5;
 
   useFrame(({ clock }) => {
     earthRef.current.rotation.y += 0.005;

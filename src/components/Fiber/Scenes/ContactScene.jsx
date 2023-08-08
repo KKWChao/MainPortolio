@@ -5,18 +5,20 @@ import { useRef } from "react";
 function ContactScene() {
   const { viewport } = useThree();
   const moonRef = useRef();
-  const [moonTexture] = useTexture([
-    "/src/assets/meshes/earthMoonMesh/8k_moon.jpg",
-  ]);
+  const [moonTexture] = useTexture(["./assets/mesh/earthMoonMesh/8k_moon.jpg"]);
 
   useFrame(({ clock }) => {
-    moonRef.current.rotation.x += clock.getElapsedTime() * 0.000001;
+    moonRef.current.rotation.x += clock.getElapsedTime() * 0.0000005;
   });
 
   return (
     <group position-y={-viewport.height * 4}>
-      <mesh position={[0, -4.3, 4]} ref={moonRef}>
-        <sphereGeometry args={[4, 64, 64]} />
+      <mesh
+        position={[0, -4.3, 4]}
+        ref={moonRef}
+        rotate={[Math.PI / 2, Math.PI / 2, 0]}
+      >
+        <sphereGeometry args={[4, 128, 128]} />
         <meshPhongMaterial map={moonTexture} />
       </mesh>
     </group>
