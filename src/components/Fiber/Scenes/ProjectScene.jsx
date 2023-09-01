@@ -42,9 +42,18 @@ export const projects = [
     projectLink: "https://kcyoutubeclone.netlify.app/",
     technologies: ["React", "MUI", "API"],
   },
-
   {
     id: 3,
+    imageSrc: "./assets/images/ProjectImage6.png",
+    projectName: "Feedback Board",
+    projectDescription:
+      "An interactive feedback board to let me know what I should improve and work on. Features real time updates with filter and search functionality and toggleable ligth and dark modes. Users can comment, upvote and post images.",
+    projectLink: "https://kc-feedback-board.vercel.app/",
+    githubLink: "https://github.com/KKWChao",
+    technologies: ["MongoDB", "Next.JS", "Tailwind", ""],
+  },
+  {
+    id: 4,
     imageSrc: "./assets/images/ProjectImage3.png",
     projectName: "EvoGym",
     projectDescription:
@@ -53,8 +62,9 @@ export const projects = [
     githubLink: "https://github.com/KKWChao/DemoSite",
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
+
   {
-    id: 4,
+    id: 5,
     imageSrc: "./assets/images/ProjectImage5.png",
     projectName: "Sociopedia",
     projectDescription:
