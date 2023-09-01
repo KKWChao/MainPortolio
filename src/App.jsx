@@ -1,6 +1,6 @@
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import About from "@/scenes/About";
 import Home from "@/scenes/Home";
@@ -33,26 +33,39 @@ function App() {
         <color attach="background" args={["#000000"]} />
 
         <ScrollControls pages={5} damping={0.1}>
+          <Suspense fallback={null}>
+            <Lighting />
+          </Suspense>
           <Lighting />
           {/* <OrbitControls /> */}
 
           <Scroll>
             {/* page items */}
             <HomeBox />
-            <AboutScene />
-            <ProjectScene />
-            <SkillScene />
-            <ContactScene />
+            <Suspense fallback={null}>
+              <AboutScene />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectScene />
+            </Suspense>
+            <Suspense fallback={null}>
+              <SkillScene />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ContactScene />
+            </Suspense>
           </Scroll>
 
-          <Scroll html id="pages">
-            <ScrollManager section={section} onSectionChange={setSection} />
-            <Home />
-            <About />
-            <Projects />
-            <Skills />
-            <Contact />
-          </Scroll>
+          <Suspense fallback={null}>
+            <Scroll html id="pages">
+              <ScrollManager section={section} onSectionChange={setSection} />
+              <Home />
+              <About />
+              <Projects />
+              <Skills />
+              <Contact />
+            </Scroll>
+          </Suspense>
         </ScrollControls>
       </Canvas>
 
