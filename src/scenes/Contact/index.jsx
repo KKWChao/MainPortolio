@@ -4,7 +4,7 @@ import Section from "@/components/Reusable/Section";
 import Footer from "@/components/Footer";
 
 function Contact() {
-  const formStyle = "md:w-1/3 p-5 rounded-md opacity-90 text-black w-full";
+  const formStyle = "md:w-1/3 p-5 rounded-md opacity-90 text-black w-full ";
   const {
     register,
     trigger,
@@ -18,11 +18,28 @@ function Contact() {
     }
   };
   return (
-    <Section id="contact" className="">
-      <h1 className="text-5xl py-10 title">Contact Me</h1>
-      <motion.div className="px-2">
+    <Section id="contact" className="mx-auto">
+      <div className="flex justify-center">
+        <motion.h1
+          className="text-5xl mb-10 title bg-gray-700 p-2 rounded-md bg-opacity-80 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2 }}
+        >
+          Contact Me
+        </motion.h1>
+      </div>
+
+      <motion.div
+        className="px-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 3 }}
+      >
         <form
-          className="flex flex-col items-center gap-10"
+          className="flex flex-col items-center gap-10 mx-5"
           target="_blank"
           onSubmit={onSubmit}
           // add my link from from submit

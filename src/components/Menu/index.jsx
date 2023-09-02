@@ -16,36 +16,36 @@ function Menu(props) {
       </button>
       <div
         className={`absolute z-9 bg-gray-800 top-0 right-0 h-screen transition-all duration-100 ease-in-out ${
-          menuOpen ? "w-96" : "w-0"
+          menuOpen ? "md:w-96 w-full" : "w-0"
         }`}
       >
-        <div className="flex flex-col mt-44 h-screen gap-12 text-white text-3xl">
+        <div className="flex flex-col md:mt-44 mt-24 h-screen gap-12 text-white text-3xl">
           <button
-            className="hover:bg-blue-400 transition-all duration-150 p-2"
+            className="hover:bg-blue-400 active:bg-blue-500 transition-all duration-150 p-2"
             onClick={() => onSectionChange(0)}
           >
             Home
           </button>
           <button
-            className="hover:bg-blue-400 transition-all duration-150 p-2"
+            className="hover:bg-blue-400 active:bg-blue-500 transition-all duration-150 p-2"
             onClick={() => onSectionChange(1)}
           >
             About
           </button>
           <button
-            className="hover:bg-blue-400 transition-all duration-150 p-2"
+            className="hover:bg-blue-400 active:bg-blue-500 transition-all duration-150 p-2"
             onClick={() => onSectionChange(2)}
           >
             Projects
           </button>
           <button
-            className="hover:bg-blue-400 transition-all duration-150 p-2"
+            className="hover:bg-blue-400 active:bg-blue-500 transition-all duration-150 p-2"
             onClick={() => onSectionChange(3)}
           >
             Skills
           </button>
           <button
-            className="hover:bg-blue-400 transition-all duration-150 p-2"
+            className="hover:bg-blue-400 active:bg-blue-500 transition-all duration-150 p-2"
             onClick={() => onSectionChange(4)}
           >
             Contact Me

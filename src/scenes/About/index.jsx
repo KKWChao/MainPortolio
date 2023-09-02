@@ -3,10 +3,10 @@ import Section from "@/components/Reusable/Section";
 
 function About() {
   return (
-    <Section id="about" className="">
-      <div className="overflow-hidden mx-auto">
+    <Section id="about" className="mx-auto">
+      <div className="overflow-hidden flex flex-col items-center">
         <motion.h1
-          className="text-5xl title"
+          className="text-5xl bg-gray-700 p-2 rounded-md bg-opacity-80 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -21,7 +21,7 @@ function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 3 }}
         >
-          <p className="lg:text-2xl lg:w-1/2 text-md md:px-10 px-2 md:text-2xl md:w-3/4 mt-10 bg-black rounded-lg bg-opacity-60 hover:opacity-60 ease-in-out duration-300">
+          <p className="lg:text-2xl lg:w-1/2 text-md md:px-10 px-2 md:text-2xl md:w-3/4 mt-10 bg-black rounded-lg bg-opacity-60 ease-in-out duration-300">
             I am a web developer with a strong background in building websites
             and projects. With a focus on JavaScript, HTML/CSS, and React, I am
             dedicated to creating exceptional user experiences that captivate

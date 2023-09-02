@@ -10,7 +10,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AnimatePresence>
       <App />
     </AnimatePresence>
-
     <Loader />
   </React.StrictMode>
 );

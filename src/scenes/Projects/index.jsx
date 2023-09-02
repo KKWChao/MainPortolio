@@ -1,6 +1,8 @@
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { motion } from "framer-motion";
 import { useAtom } from "jotai";
+
 import {
   currentProjectAtom,
   projects,
@@ -17,19 +19,50 @@ function Projects() {
   }
 
   return (
-    <section className="h-screen text-white flex flex-col justify-around text-center">
-      <h1 className="text-5xl mb-[15%]">Projects</h1>
-      <div className="flex justify-center gap-32">
-        <button className="text-xl p-2" onClick={previousProject}>
+    <section className="h-screen text-white flex flex-col justify-around text-center mx-auto">
+      <div className="flex justify-center mb-[15%] ">
+        <motion.h1
+          className="text-5xl bg-gray-700 p-2 rounded-md bg-opacity-80 w-fit"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 1.5,
+          }}
+          key={{}}
+        >
+          Projects
+        </motion.h1>
+      </div>
+
+      <motion.div
+        className="flex justify-center gap-32"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          ease: "linear",
+          duration: 1.5,
+        }}
+        key={{}}
+      >
+        <button
+          className="text-xl p-2 bg-gray-600 pr-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+          onClick={previousProject}
+        >
           <ArrowBackIosIcon fontSize="large" />
           Prev
         </button>
 
-        <button className="text-xl p-2" onClick={nextProject}>
+        <button
+          className="text-xl p-2 bg-gray-600 pl-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+          onClick={nextProject}
+        >
           Next
           <ArrowForwardIosIcon fontSize="large" />
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 }
