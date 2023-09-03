@@ -1,4 +1,4 @@
-import { Scroll, ScrollControls } from "@react-three/drei";
+import { Loader, Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 
@@ -70,6 +70,7 @@ function App() {
           </ScrollControls>
         </Canvas>
       </Suspense>
+      <Loader />
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
