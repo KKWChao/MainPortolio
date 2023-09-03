@@ -9,9 +9,9 @@ export const projects = [
   {
     id: 0,
     imageSrc: "./assets/images/ProjectImage1.png",
-    projectName: "Storefront",
+    projectName: "Ecommerce Storefront",
     projectDescription:
-      "Cyberwares is a sleek e-commerce platform offering cutting-edge tech products. Powered by Next.js, it delivers a seamless shopping experience with responsive design. Secure payments are facilitated by Stripe integration. The admin site, built with Next.js, NextAuth, Tailwind CSS, and Chart.js, enables efficient product and category management. Explore and purchase the latest tech innovations with Cyberwares.",
+      "Cyberwares is a sleek e-commerce platform offering cutting-edge tech products. Powered by Next.js, it delivers a seamless shopping experience with responsive design. Secure payments are facilitated by Stripe integration. ",
     githubLink: "https://github.com/KKWChao/CyberwaresFrontend",
     projectLink: "https://cyberwares-frontend.vercel.app/",
     technologies: ["NextJS", "MongoDB", "Node.js", "Stripe"],
@@ -19,9 +19,9 @@ export const projects = [
   {
     id: 1,
     imageSrc: "./assets/images/ProjectImage2.png",
-    projectName: "Admin page",
+    projectName: "Ecommerce    Admin page",
     projectDescription:
-      "Explore Cyberwares Admin, a web application designed for product management and administration. This site serves as the back-end administration panel for the Cyberwares e-commerce store. It provides a user-friendly interface to manage product inventory, categories, and other essential information. Experience efficient product management and seamless integration with the Cyberwares e-commerce platform.",
+      "Explore Cyberwares Admin, a web application designed for product management and administration. This site serves as the back-end administration panel for the Cyberwares e-commerce store. It provides a user-friendly interface to manage product inventory, categories, and other essential information.",
     githubLink: "https://github.com/KKWChao/CyberwaresAdmin",
     projectLink: "https://cyberwares-admin.vercel.app/",
     technologies: [
@@ -57,7 +57,7 @@ export const projects = [
     imageSrc: "./assets/images/ProjectImage3.png",
     projectName: "EvoGym",
     projectDescription:
-      "Discover EvoGym Demo, a sleek and interactive fitness website that showcases the features and capabilities of EvoGym. Explore various workout routines, browse fitness classes, and learn about personalized training programs. With its modern design and user-friendly interface, EvoGym Demo offers an immersive experience for fitness enthusiasts looking to achieve their health and wellness goals.",
+      "Explore various workout routines, browse fitness classes, and learn about personalized training programs. With its modern design and user-friendly interface, EvoGym Demo offers an immersive experience for fitness enthusiasts looking to achieve their health and wellness goals.",
     projectLink: "https://evogym-demo.pages.dev/",
     githubLink: "https://github.com/KKWChao/DemoSite",
     technologies: ["React", "TypeScript", "TailwindCSS"],
@@ -152,7 +152,7 @@ function Project(props) {
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.14}
-        position={[-1.2, -0.3, -0.01]}
+        position={[-1.2, -0.5, -0.01]}
       >
         {project.projectDescription}
       </Text>
