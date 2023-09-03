@@ -29,46 +29,47 @@ function App() {
 
   return (
     <>
-      <Canvas id="canvas" style={{ position: "fixed" }}>
-        <color attach="background" args={["#000000"]} />
+      <Suspense fallback={null}>
+        <Canvas id="canvas" style={{ position: "fixed" }}>
+          <color attach="background" args={["#000000"]} />
 
-        <ScrollControls pages={5} damping={0.1}>
-          <Suspense fallback={null}>
+          <ScrollControls pages={5} damping={0.1}>
+            <Suspense fallback={null}>
+              <Lighting />
+            </Suspense>
             <Lighting />
-          </Suspense>
-          <Lighting />
-          {/* <OrbitControls /> */}
+            {/* <OrbitControls /> */}
 
-          <Scroll>
-            {/* page items */}
-            <HomeBox />
-            <Suspense fallback={null}>
-              <AboutScene />
-            </Suspense>
-            <Suspense fallback={null}>
-              <ProjectScene />
-            </Suspense>
-            <Suspense fallback={null}>
-              <SkillScene />
-            </Suspense>
-            <Suspense fallback={null}>
-              <ContactScene />
-            </Suspense>
-          </Scroll>
-
-          <Suspense fallback={null}>
-            <Scroll html id="pages">
-              <ScrollManager section={section} onSectionChange={setSection} />
-              <Home />
-              <About />
-              <Projects />
-              <Skills />
-              <Contact />
+            <Scroll>
+              {/* page items */}
+              <HomeBox />
+              <Suspense fallback={null}>
+                <AboutScene />
+              </Suspense>
+              <Suspense fallback={null}>
+                <ProjectScene />
+              </Suspense>
+              <Suspense fallback={null}>
+                <SkillScene />
+              </Suspense>
+              <Suspense fallback={null}>
+                <ContactScene />
+              </Suspense>
             </Scroll>
-          </Suspense>
-        </ScrollControls>
-      </Canvas>
 
+            <Suspense fallback={null}>
+              <Scroll html id="pages">
+                <ScrollManager section={section} onSectionChange={setSection} />
+                <Home />
+                <About />
+                <Projects />
+                <Skills />
+                <Contact />
+              </Scroll>
+            </Suspense>
+          </ScrollControls>
+        </Canvas>
+      </Suspense>
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
