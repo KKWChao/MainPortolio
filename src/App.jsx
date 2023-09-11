@@ -29,48 +29,39 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={null}>
-        <Canvas id="canvas" style={{ position: "fixed" }}>
-          <color attach="background" args={["#000000"]} />
+      <Canvas id="canvas" style={{ position: "fixed" }}>
+        <color attach="background" args={["#000000"]} />
 
-          <ScrollControls pages={5} damping={0.1}>
-            <Suspense fallback={null}>
-              <Lighting />
-            </Suspense>
-            <Lighting />
-            {/* <OrbitControls /> */}
+        <ScrollControls pages={5} damping={0.1}>
+          <Lighting />
 
-            <Scroll>
-              {/* page items */}
-              <HomeBox />
-              <Suspense fallback={null}>
-                <AboutScene />
-              </Suspense>
-              <Suspense fallback={null}>
-                <ProjectScene />
-              </Suspense>
-              <Suspense fallback={null}>
-                <SkillScene />
-              </Suspense>
-              <Suspense fallback={null}>
-                <ContactScene />
-              </Suspense>
-            </Scroll>
+          <Lighting />
+          {/* <OrbitControls /> */}
 
-            <Suspense fallback={null}>
-              <Scroll html id="pages">
-                <ScrollManager section={section} onSectionChange={setSection} />
-                <Home />
-                <About />
-                <Projects />
-                <Skills />
-                <Contact />
-              </Scroll>
-            </Suspense>
-          </ScrollControls>
-        </Canvas>
-      </Suspense>
-      <Loader />
+          <Scroll>
+            {/* page items */}
+            <HomeBox />
+
+            <AboutScene />
+
+            <ProjectScene />
+
+            <SkillScene />
+
+            <ContactScene />
+          </Scroll>
+
+          <Scroll html id="pages">
+            <ScrollManager section={section} onSectionChange={setSection} />
+            <Home />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </Scroll>
+        </ScrollControls>
+      </Canvas>
+
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
