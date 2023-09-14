@@ -11,7 +11,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Suspense fallback={<Loader />}>
         <App />
       </Suspense>
-      <Loader />
     </AnimatePresence>
   </React.StrictMode>
 );
