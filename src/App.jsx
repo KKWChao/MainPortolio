@@ -48,7 +48,7 @@ function App() {
 
             <SkillScene />
 
-            <ContactScene />
+            {/* <ContactScene /> */}
           </Scroll>
 
           <Scroll html id="pages">

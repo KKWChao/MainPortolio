@@ -5,9 +5,9 @@ import { useMemo, useRef } from "react";
 const StarsAnimated = () => {
   const starsRef = useRef();
   const starProps = useMemo(() => ({
-    radius: 20,
-    depth: 80,
-    count: 500,
+    radius: 5,
+    depth: 50,
+    count: 100,
     factor: 1,
     saturation: 0,
     speed: 1,

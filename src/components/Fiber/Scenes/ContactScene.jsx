@@ -5,7 +5,7 @@ import { useRef } from "react";
 function ContactScene() {
   const { viewport } = useThree();
   const moonRef = useRef();
-  const [moonTexture] = useTexture(["./assets/mesh/earthMoonMesh/8k_moon.jpg"]);
+  const [moonTexture] = useTexture(["./assets/mesh/earthMoonMesh/2k_moon.jpg"]);
 
   useFrame(({ clock }) => {
     moonRef.current.rotation.x += clock.getElapsedTime() * 0.0000005;
