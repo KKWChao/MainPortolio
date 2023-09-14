@@ -40,9 +40,9 @@ function App() {
 
           <Scroll>
             {/* page items */}
-            {/* <HomeBox /> */}
+            <HomeBox />
 
-            {/* <AboutScene /> */}
+            <AboutScene />
 
             <ProjectScene />
 
