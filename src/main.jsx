@@ -8,7 +8,10 @@ import { Loader } from "@react-three/drei";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AnimatePresence>
-      <App />
+      <Suspense fallback={<Loader />}>
+        <App />
+      </Suspense>
+      <Loader />
     </AnimatePresence>
   </React.StrictMode>
 );
