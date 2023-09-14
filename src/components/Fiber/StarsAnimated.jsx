@@ -5,10 +5,10 @@ import { useMemo, useRef } from "react";
 const StarsAnimated = () => {
   const starsRef = useRef();
   const starProps = useMemo(() => ({
-    radius: 50,
-    depth: 100,
-    count: 5000,
-    factor: 4,
+    radius: 20,
+    depth: 80,
+    count: 500,
+    factor: 1,
     saturation: 0,
     speed: 1,
   }));
