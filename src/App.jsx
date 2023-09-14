@@ -42,13 +42,13 @@ function App() {
             {/* page items */}
             {/* <HomeBox /> */}
 
-            <AboutScene />
+            {/* <AboutScene /> */}
 
             <ProjectScene />
 
             <SkillScene />
 
-            <ContactScene />
+            {/* <ContactScene /> */}
           </Scroll>
 
           <Scroll html id="pages">
