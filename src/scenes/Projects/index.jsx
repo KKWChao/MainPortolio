@@ -1,4 +1,4 @@
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
@@ -20,7 +20,7 @@ function Projects() {
 
   return (
     <section className="h-screen text-white flex flex-col justify-around text-center mx-auto">
-      <div className="flex justify-center mb-[15%] ">
+      <div className="flex justify-center mb-[30%]">
         <motion.h1
           className="text-5xl bg-gray-700 p-2 rounded-md bg-opacity-80 w-fit"
           initial={{ opacity: 0 }}
@@ -36,33 +36,37 @@ function Projects() {
         </motion.h1>
       </div>
 
-      <motion.div
-        className="flex justify-center gap-32"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{
-          ease: "linear",
-          duration: 1.5,
-        }}
-        key={{}}
-      >
-        <button
-          className="text-xl p-2 bg-gray-600 pr-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
-          onClick={previousProject}
+      <div>
+        <motion.div
+          className="flex justify-center gap-32"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 1.5,
+          }}
+          key={{}}
         >
-          <ArrowBackIosIcon fontSize="large" />
-          Prev
-        </button>
+          <button
+            className="text-xl bg-gray-600 md:pr-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+            onClick={previousProject}
+          >
+            <ArrowBackIosNewIcon fontSize="large" />
+            <span className="hidden md:visible">Prev</span>
+          </button>
 
-        <button
-          className="text-xl p-2 bg-gray-600 pl-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
-          onClick={nextProject}
-        >
-          Next
-          <ArrowForwardIosIcon fontSize="large" />
-        </button>
-      </motion.div>
+          <button
+            className="text-xl bg-gray-600 md:pl-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+            onClick={nextProject}
+          >
+            <span className="hidden md:visible">Next</span>
+
+            <ArrowForwardIosIcon fontSize="large" />
+          </button>
+        </motion.div>
+        <span>Click Left or Right...</span>
+      </div>
     </section>
   );
 }
