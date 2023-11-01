@@ -5,7 +5,7 @@ import { motion } from "framer-motion-3d";
 import { atom, useAtom } from "jotai";
 import { useEffect, useRef, useState } from "react";
 
-export const projects = [
+const projects = [
   {
     id: 0,
     imageSrc: "./assets/images/ProjectImage1.png",
@@ -75,7 +75,7 @@ export const projects = [
   },
 ];
 
-export const currentProjectAtom = atom(Math.floor(projects.length / 2));
+const currentProjectAtom = atom(Math.floor(projects.length / 2));
 
 function ProjectScene() {
   const { viewport } = useThree();

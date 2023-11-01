@@ -36,7 +36,7 @@ function App() {
           <Scroll>
             {/* page items */}
             <HomeBox />
-            <AboutScene />
+            {/* <AboutScene /> */}
             <ProjectScene />
             <SkillScene />
             {/* <ContactScene /> */}
