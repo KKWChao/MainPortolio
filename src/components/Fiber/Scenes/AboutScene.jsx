@@ -2,7 +2,7 @@ import { useTexture } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 
-function AboutScene(props) {
+function AboutScene() {
   const { viewport } = useThree();
 
   const [

@@ -29,43 +29,42 @@ function Skills() {
   return (
     <Section id="skills" className="mx-auto">
       <div className="flex justify-center">
-        <h1 className="text-5xl my-10 bg-gray-700 p-2 rounded-md bg-opacity-80 w-fit">
+        <h1 className="text-5xl my-10  p-2 rounded-md bg-opacity-80 w-fit">
           Skills
         </h1>
       </div>
 
-      <div className="flex justify-center m-4">
-        <div className="grid grid-cols-2 md:gap-10 gap-1 bg-black bg-opacity-70 rounded-lg p-2">
-          <h2 className="md:text-4xl text-2xl font-semibold">FrontEnd</h2>
-          <h2 className="md:text-4xl text-2xl font-semibold">Backend</h2>
-          <div>
-            {skillList.frontEndSkills.map((item, idx) => (
-              <motion.p
-                key={`frontend_${item}_${idx}`}
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: idx, type: "spring" }}
-                className="text-2xl p-1"
-              >
-                {item}
-              </motion.p>
-            ))}
-          </div>
-          <div>
-            {skillList.backEndSkills.map((item, idx) => (
-              <motion.p
-                key={`backend_${item}_${idx}`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: idx, type: "spring" }}
-                className="text-2xl p-1 "
-              >
-                {item}
-              </motion.p>
-            ))}
-          </div>
+      <div className="flex justify-around">
+        <div className="flex flex-col gap-4">
+          <h2 className="md:text-6xl text-4xl font-semibold">FrontEnd</h2>
+          {skillList.frontEndSkills.map((item, idx) => (
+            <motion.p
+              key={`frontend_${item}_${idx}`}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: idx }}
+              className="md:text-2xl p-1"
+            >
+              {item}
+            </motion.p>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <h2 className="md:text-6xl text-4xl font-semibold">Backend</h2>
+          {skillList.backEndSkills.map((item, idx) => (
+            <motion.p
+              key={`backend_${item}_${idx}`}
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: idx }}
+              className="md:text-2xl p-1 "
+            >
+              {item}
+            </motion.p>
+          ))}
         </div>
       </div>
       {/* <div className="md:mt-20">

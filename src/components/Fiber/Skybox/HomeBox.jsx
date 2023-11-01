@@ -11,9 +11,9 @@ function HomeBox({ ...props }) {
     sphereRef.current.rotation.y = clock.getElapsedTime() * 0.05;
   });
   return (
-    <group {...props} position={[0, 0, 3]} ref={sphereRef}>
+    <group {...props} position={[0, 0, 5]} ref={sphereRef}>
       <mesh>
-        <sphereGeometry args={[4, 32, 32]} />
+        <sphereGeometry args={[4, 24, 24]} />
         <meshStandardMaterial map={map} side={THREE.BackSide} />
       </mesh>
     </group>

@@ -4,7 +4,7 @@ function Section({ children }) {
   return (
     <AnimatePresence>
       <motion.section
-        className="text-white text-center overflow-hidden flex justify-center align-middle flex-col h-screen w-screen"
+        className="text-white text-center overflow-hidden flex justify-center align-middle flex-col min-h-screen min-w-screen"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}

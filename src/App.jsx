@@ -31,23 +31,14 @@ function App() {
     <>
       <Canvas id="canvas" style={{ position: "fixed" }}>
         <color attach="background" args={["#000000"]} />
-
         <ScrollControls pages={5} damping={0.1}>
           <Lighting />
-
-          <Lighting />
-          {/* <OrbitControls /> */}
-
           <Scroll>
             {/* page items */}
             <HomeBox />
-
-            {/* <AboutScene /> */}
-
+            <AboutScene />
             <ProjectScene />
-
             <SkillScene />
-
             {/* <ContactScene /> */}
           </Scroll>
 

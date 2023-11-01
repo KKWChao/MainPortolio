@@ -22,7 +22,7 @@ function Projects() {
     <section className="h-screen text-white flex flex-col justify-around text-center mx-auto">
       <div className="flex justify-center mb-[30%]">
         <motion.h1
-          className="text-5xl bg-gray-700 p-2 rounded-md bg-opacity-80 w-fit"
+          className="text-5xl p-2 rounded-md bg-opacity-80 w-fit"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -49,18 +49,18 @@ function Projects() {
           key={{}}
         >
           <button
-            className="text-xl bg-gray-600 md:pr-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+            className="text-xl p-2 bg-gray-600 md:pr-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800 flex"
             onClick={previousProject}
           >
             <ArrowBackIosNewIcon fontSize="large" />
-            <span className="hidden md:visible">Prev</span>
+            <span className="hidden md:flex">Prev</span>
           </button>
 
           <button
-            className="text-xl bg-gray-600 md:pl-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800"
+            className="text-xl p-2 bg-gray-600 md:pl-4 rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-800 flex"
             onClick={nextProject}
           >
-            <span className="hidden md:visible">Next</span>
+            <span className="hidden md:flex">Next</span>
 
             <ArrowForwardIosIcon fontSize="large" />
           </button>
