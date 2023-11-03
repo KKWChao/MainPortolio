@@ -5,7 +5,7 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 function Home() {
   return (
     <Section id="home" className="">
-      <div className="relative h-screen flex flex-col justify-center items-center">
+      <div className="relative min-h-[100dvh] flex flex-col justify-center items-center">
         <h1 className="md:text-6xl text-3xl bg-gray-700 w-fit p-2 rounded-md bg-opacity-80">
           Hi, My name is Kelvin Chao
         </h1>

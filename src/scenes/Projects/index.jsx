@@ -19,7 +19,7 @@ function Projects() {
   }
 
   return (
-    <section className="h-screen text-white flex flex-col justify-around text-center mx-auto">
+    <section className="min-h-[100dvh] text-white flex flex-col justify-around text-center mx-auto">
       <div className="flex justify-center mb-[30%]">
         <motion.h1
           className="text-5xl p-2 rounded-md bg-opacity-80 w-fit"
