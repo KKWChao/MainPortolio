@@ -14,10 +14,8 @@ import Lighting from "./components/Fiber/Lighting";
 import ScrollManager from "./components/Reusable/ScrollManager";
 
 import HomeBox from "@/components/Fiber/Skybox/HomeBox";
-import AboutScene from "@/components/Fiber/Scenes/AboutScene";
 import SkillScene from "@/components/Fiber/Scenes/SkillsScene";
 import ProjectScene from "@/components/Fiber/Scenes/ProjectScene";
-import ContactScene from "@/components/Fiber/Scenes/ContactScene";
 
 function App() {
   const [section, setSection] = useState(0);
